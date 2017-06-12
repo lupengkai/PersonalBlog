@@ -1,0 +1,112 @@
+html { overflow-x:hidden; }
+
+body{
+    background-position: center;
+    background-image: url(../img/bir.jpg);
+    overflow:hidden;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 900px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+body a{
+    font-family: font3;
+}
+
+body .navbar {
+    margin: 0 auto;
+    width: 1360px;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+
+.navbar .container-fluid .collapse .nav li a{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.navbar .container-fluid .collapse .nav li img{
+    opacity: 0.5;
+}
+.navbar .container-fluid .collapse .nav li img:hover{
+    opacity: 1.0;
+}
+.navbar .container-fluid .collapse .nav #head a{
+    color: #ffffff;
+    font-size: 25px;
+    font-family: font2;
+}
+.navbar .container-fluid .collapse .nav #head a:hover{
+    color: #45adff;
+}
+.navbar .container-fluid .collapse .nav li a:hover{
+    color: #45adff;
+    font-size: 25px;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+    margin-left: -1100px;
+    background-color: rgba(18, 76, 86, 0.00);
+}
+
+.breadcrumb li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.breadcrumb li a:hover{
+    text-decoration: none;
+    color: #45adff;
+}
+
+.blog{
+    margin: 0 auto;
+    width: 900px;
+}
+.well{
+    word-break:break-all;
+    text-align: left;
+    width: 900px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.well a{
+    color: whitesmoke;
+    font-size: large;
+}
+.well a:hover{
+    text-decoration: none;
+}
+
+.blog1{
+    margin: 0 auto;
+    width: 900px;
+}
+.blog1 .well{
+    border: hidden;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+.blog1 .well  button{
+    opacity: 0.8;
+}
+.blog1 .well  a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.49);
+}
+.blog1 .well  a:hover{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.81);
+}
+
+.blog button a:hover{
+    text-decoration: none;
+}
+.blog button{
+    margin-left: -200px;
+    margin-right: 200px;
+}
+.breadcrumb li a{
+    font-size: 19px;
+}
+
+

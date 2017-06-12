@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+}
+
+.user{
+    width: 500px;
+    height: 34px;
+    background-color: aqua;
+    margin: 0 auto;
+}

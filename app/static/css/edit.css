@@ -1,0 +1,15 @@
+body{
+    background-position: center;
+    background-image: url(../img/edit.jpeg);
+    overflow:hidden;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 790px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.blog1 .well .col-sm-4 a:hover{
+    text-decoration: none;
+    color: rgb(69, 173, 255);
+}

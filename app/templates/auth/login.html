@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %} Blog - Login {% endblock %}
+{% block head %}
+    {{ super() }}
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/details.css') }}">
+
+{% endblock %}
+{% block page_content %}
+
+    <div class="col-md-4">
+        {{ wtf.quick_form(form) }}
+        <a href="{{ url_for('auth.password_reset_request') }}">忘记密码</a>
+      &nbsp;
+      &nbsp;
+         <a href="{{ url_for('auth.register') }}">新用户注册</a>
+    </div>
+
+
+
+{% endblock %}

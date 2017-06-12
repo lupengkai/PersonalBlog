@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+
+
+{% block title %}我的博客{% endblock %}
+{% block head %}
+    {{ super() }}
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/details.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="sth">
+        <h1>Welcome!</h1>
+        <br>
+        <h5>This is my blog,you would find something interesting!</h5>
+        <h5>If you want to touch me,please click about me!</h5>
+        <br>
+        <img src="{{ url_for('static', filename='img/cup.png') }}">
+
+    </div>
+
+
+    <div>
+    <h5>最新评论</h5>
+    <!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+<!-- 多说最新评论 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"artisticblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+    </div>
+
+    <div class="blg">
+
+
+        {% for post in posts %}
+            <div class="bloog">
+                <a class="list-group-item">{{ post.title }}</a>
+                <a class="list-group-item">{{ moment(post.timestamp).format('LLL') }}</a>
+                <a class="list-group-item">{{ post.category.name }}</a>
+                <a href="{{ url_for('main.post',id=post.id) }}" class="list-group-item" id="detail">阅读全文</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="pagination">
+        {{ macros.pagination_widget(pagination, 'main.posts') }}
+    </div>
+
+{% endblock %}

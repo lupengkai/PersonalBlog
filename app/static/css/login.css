@@ -1,0 +1,43 @@
+body{
+    margin: 0 auto;
+
+}
+html { overflow-x:hidden; }
+
+.user{
+    background-position: center;
+    background-image: url(../img/log.jpg);
+    background-repeat: no-repeat;
+    overflow:hidden;
+    text-align: center;
+    width: 1360px;
+    height: 840px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+#user1{
+    margin-top: 430px;
+    margin-left: 370px;
+}
+
+#user1 .form-horizontal .form-group .col-sm-4{
+    opacity:0.65;
+}
+
+#user1 .form-horizontal .form-group .col-sm-4:hover {
+    opacity:0.85;
+}
+@font-face {
+    font-family: 'font1';
+    src:url(../font/GOTHIC.TTF);
+}
+#user1 form label{
+    font-family: font1;
+    font-size: large;
+}
+#user1 .form-horizontal .form-group .col-sm-4 .btn a {
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}

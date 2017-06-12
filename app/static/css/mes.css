@@ -1,0 +1,26 @@
+body{
+    background-image: url(../img/mes.png);
+    background-repeat: no-repeat;
+    height: 890px;
+    margin: 0 auto;
+}
+
+.navbar .container-fluid .collapse .nav #head a:hover{
+    color: #ffad13;
+}
+.navbar .container-fluid .collapse .nav li a:hover{
+    color: #ffad13;
+    font-size: 25px;
+}
+
+.blog1 .well .col-sm-4 a:hover{
+    text-decoration: none;
+    color: rgba(255, 173, 19, 0.81);
+}
+.breadcrumb li a{
+    font-size: 19px;
+}
+.breadcrumb li a:hover{
+    text-decoration: none;
+    color: #ffad13;
+}

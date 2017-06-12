@@ -1,0 +1,37 @@
+.user{
+    background-position: center;
+    background-image: url(../img/reg.jpg);
+    background-repeat: no-repeat;
+    overflow:hidden;
+    text-align: center;
+    width: 1360px;
+    height: 840px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+#user2{
+    margin-top: 230px;
+    margin-left: 370px;
+}
+
+#user2 .form-horizontal .form-group .col-sm-4{
+    opacity:0.75;
+}
+
+#user2 .form-horizontal .form-group .col-sm-4:hover {
+    opacity:0.89;
+}
+@font-face {
+    font-family: 'font1';
+    src:url(/static/font/GOTHIC.TTF);
+}
+#user2 form label{
+    font-family: font1;
+    font-size: large;
+}
+#user2 .form-horizontal .form-group .col-sm-4 .btn a {
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}

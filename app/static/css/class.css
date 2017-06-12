@@ -1,0 +1,19 @@
+body{
+    background-image: url(../img/class.jpeg);
+}
+body .navbar {
+    margin: 0 auto;
+    width: 1360px;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+
+.class a{
+    font-family: font3;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.class a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}

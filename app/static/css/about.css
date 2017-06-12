@@ -1,0 +1,79 @@
+.user{
+    background-position: center;
+    background-image: url(../img/man2.jpg);
+    background-repeat: no-repeat;
+    overflow:hidden;
+    text-align: center;
+    width: 1360px;
+    height: 840px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+body .navbar {
+    margin: 0 auto;
+    width: 1360px;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+.navbar .container-fluid .collapse .nav li a{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.navbar .container-fluid .collapse .nav li img{
+    opacity: 0.5;
+}
+.navbar .container-fluid .collapse .nav li img:hover{
+    opacity: 1.0;
+}
+.navbar .container-fluid .collapse .nav #head a{
+    color: #ffffff;
+    font-size: 25px;
+    font-family: font2;
+}
+.navbar .container-fluid .collapse .nav #head a:hover{
+    color: #ffad13;
+}
+.navbar .container-fluid .collapse .nav li a:hover{
+    color: #ffad13;
+    font-size: 25px;
+}
+
+.class span{
+    font-size: large;
+    color: rgb(32, 32, 32);
+}
+.class a{
+    font-family: font3;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.class a:hover{
+    color: #202020;
+    text-decoration: none;
+}
+
+.list-group{
+    margin-left: -900px;
+}
+.list-group li{
+    background-color: rgba(245, 245, 220, 0);
+    border: none;
+    margin-left: 20px;
+}
+
+.jo{
+    width: 900px;
+    margin-top: 70px;
+    text-align: left;
+    margin-left: 130px;
+}
+
+.jo span{
+    color: white;
+    font-size: large;
+}
+
+
+.jo .s2:hover{
+       color: #ffad13;
+}

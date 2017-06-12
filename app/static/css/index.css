@@ -1,0 +1,76 @@
+body{
+    background-color: rgba(0, 191, 181, 0.91);
+    background-image: url(https://www.transparenttextures.com/patterns/brick-wall-dark.png);
+    overflow:hidden;
+    background-repeat: repeat;
+    text-align: center;
+    width: 1360px;
+    height: 790px;
+    margin: 0 auto;
+}
+
+.sth{
+    padding:5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.36);
+    position: fixed;
+    width: 230px;
+    height: 520px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-left: 130px;
+}
+
+.sth h1{
+    color: white;
+}
+.sth h5{
+    color: #f5f5f5;
+}
+
+.navbar{
+    position: fixed;
+    z-index:1
+
+}
+.blog1 .well .col-sm-4 a:hover{
+    text-decoration: none;
+    color: rgb(69, 173, 255);
+}
+.blg{
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 390px;
+}
+.bloog{
+    float: left;
+    background-color: rgba(32, 32, 32, 0);
+    background-image: url(https://www.transparenttextures.com/patterns/3px-tile.png);
+    background-repeat: repeat;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.bloog a{
+    background-color: #00bfb5;
+    background-image: url(https://www.transparenttextures.com/patterns/black-linen.png);
+    background-repeat: repeat;
+    font-family: font3;
+    word-break:break-all;
+    color: white;
+    border: none;
+    text-align: left;
+}
+
+.bloog a:hover{
+    background-color: #00bfb5;
+    color: #f5f5f5;
+}
+
+.bloog #detail:hover{
+    color: #ffad13;
+}
+

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'font1';
+    src:url(/static/font/GOTHIC.TTF);
+}
+@font-face {
+    font-family: 'font2';
+    src:url(/static/font/Bonus.ttf);
+}
+@font-face {
+    font-family: 'font3';
+    src:url(/static/font/msyh.ttf);
+}
+
+.breadcrumb li a{
+    font-size: 19px;
+}

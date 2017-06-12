@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}禁止访问{% endblock %}
+
+
+{% block head %}
+    {{ super() }}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/details.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/403.css') }}">
+{% endblock%}

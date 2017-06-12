@@ -1,0 +1,56 @@
+body{
+    width: 1360px;
+    margin: 0 auto;
+    background-image: url(../img/home.jpeg);
+}
+
+body .navbar {
+    margin: 0 auto;
+    width: 1360px;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+
+
+.breadcrumb li a{
+    font-size: 19px;
+}
+
+.blog{
+    margin: 0 auto;
+    margin-left: 210px;
+    background-color: #202020;
+    width: 1360px;
+}
+.blg{
+    width: 1360px;
+    background-color: #202020;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.bloog{
+    float: left;
+    width:420px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-left: 50px;
+
+}
+
+.bloog a{
+    background-color: rgba(59, 147, 163, 0);
+    background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+    background-repeat: repeat;
+    font-family: font3;
+    word-break:break-all;
+    color: white;
+    border: none;
+    text-align: left;
+}
+
+.bloog a:hover{
+
+}
+
+.bloog #detail:hover{
+    color: #00a399;
+}

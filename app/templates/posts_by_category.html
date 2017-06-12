@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/details.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/classdel.css') }}">
+
+{% endblock %}
+
+
+
+
+{% block page_content %}
+    <ol class="breadcrumb">
+        <li><a>{{ category.name }}</a></li>
+    </ol>
+
+    <div class="blog">
+        <div class="blg">
+    {% for post in posts %}
+       <div class="bloog">
+
+            <a class="list-group-item">{{ post.title }}</a>
+            <a class="list-group-item">{{ moment(post.timestamp).format('LLL') }}</a>
+            <a href="{{ url_for('main.post',id=post.id) }}" class="list-group-item">查看更多</a>
+        </div>
+     {% endfor %}
+
+
+</div>
+    </div>
+
+
+     <div class="pagination">
+        {{ macros.pagination_widget(pagination, 'main.posts_by_category',category_id=category.id) }}
+    </div>
+
+
+
+
+
+{% endblock %}

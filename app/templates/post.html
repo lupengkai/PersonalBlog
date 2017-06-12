@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/details.css') }}">
+{% endblock %}
+
+{% block page_content %}
+
+    <ol class="breadcrumb">
+        <li><a href="{{ url_for('main.posts_by_category',category_id=post.category.id) }}">{{ post.category.name }}</a>
+        </li>
+        <li><a>{{ post.title }}</a></li>
+    </ol>
+
+    {% if current_user.is_authenticated %}
+
+
+
+        <div class="blog">
+            <div class="well">{{ post.body_html |safe }}</div>
+
+            <!--编辑删除按钮-->
+            <button type="button" class="btn">
+                <a href="{{ url_for('main.edit_post',id=post.id) }}">修改</a></button>
+            <button id='delete' type="button" style="margin-left: 100px" class="btn" data-id="{{ post.id }}">
+                删除
+            </button>
+        </div>
+    {% endif %}
+
+
+
+    {#  <div>
+            {{ post.category.name }}
+            {{ post.body_html |safe }}
+        </div>#}
+
+
+
+
+
+    <!-- 多说评论框 start -->
+    <div class=" ds-thread
+        " data-thread-key="{{ post.id }}" data-title="{{ post.title }}">
+    </div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name: "artisticblog"};
+        (function () {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+
+        $('#delete').click(function () {
+            var id = $(this).data('id');
+            $.get($SCRIPT_ROOT + '/delete-post/' + id).done(function () {
+                window.open($SCRIPT_ROOT + '/posts')
+
+            })
+
+        })
+    </script>
+{% endblock %}

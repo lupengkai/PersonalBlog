@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}关于我{% endblock %}
+{% block head %}
+    {{ super() }}
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="user">
+        <div class="jo"><img src="{{ url_for('static',filename='img/hui.png') }}">
+
+            <span class="s1">Bluse Lee</span><br>
+            <span class="s2">&nbsp;&nbsp;&nbsp;Name</span></div>
+
+        <div class="jo"><img src="{{ url_for('static',filename='img/ma.png') }}">
+            <span class="s1">Welcome!</span><br>
+            <span class="s2">Introduction</span></div>
+
+        <div class="jo"><img src="{{ url_for('static',filename='img/coffee.png') }}">
+            <span class="s1">Wechat:1111111</span><br>
+            <span class="s2">联系我</span></div>
+
+
+    </div>
+
+{% endblock %}

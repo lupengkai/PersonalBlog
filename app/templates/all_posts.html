@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{% endblock %}
+
+
+
+
+{% block page_content %}
+    <div class="container">
+        <div class="page-header">
+            <h1></h1>
+        </div>
+
+
+        <div>
+            <ul>
+                {% for post in posts %}
+                    <li id="post{{ post.id }}">
+                        {{ post.title }} <a href="{{ url_for('main.post',id=post.id) }}">查看更多</a>
+                        {% if current_user.is_administrator() %}
+
+                        {% endif %}
+
+                        {% if current_user == post.author %}
+                            <a href="{{ url_for('main.edit_post',id=post.id) }}">修改</a>
+                            <button class="delete" data-id="{{ post.id }}">删除</button>
+
+
+
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="pagination">
+                {{ macros.pagination_widget(pagination, 'main.posts') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+
+        $('.delete').click(function () {
+            var id = $(this).data('id');
+            $.get($SCRIPT_ROOT + '/delete-post/' + id).done(function () {
+                $('#post'+id).remove();
+                if(document.getElementsByClassName('delete').length==0) {
+                    location.reload()
+                }
+            })
+
+        })
+    </script>
+
+{% endblock %}
